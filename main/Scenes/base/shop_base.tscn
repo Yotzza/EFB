@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://wunsx1akgrp0"]
+
+[ext_resource type="PackedScene" uid="uid://bc24edh4a84n3" path="res://main/Scenes/player/player.tscn" id="1_pd3se"]
+
+[node name="ShopBase" type="Node2D" unique_id=910564130]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=809886934]
+offset_left = -500.0
+offset_top = -300.0
+offset_right = 500.0
+offset_bottom = 300.0
+color = Color(0.5890956, 0.5890956, 0.5890956, 1)
+
+[node name="Player" parent="ColorRect" unique_id=158068950 instance=ExtResource("1_pd3se")]
