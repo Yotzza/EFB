@@ -1,0 +1,255 @@
+[gd_scene format=3 uid="uid://efwgycnemihb"]
+
+[ext_resource type="Script" uid="uid://dtbv05wxeee3v" path="res://main/UI/PlayMenu/save_select_menu.gd" id="1_chiu8"]
+[ext_resource type="Texture2D" uid="uid://8vwgnb5g2wft" path="res://main/UI/Assets/button.png" id="2_l6fqg"]
+[ext_resource type="Texture2D" uid="uid://xwad0po1aibl" path="res://main/UI/Assets/Background.png" id="2_pyukv"]
+[ext_resource type="Texture2D" uid="uid://d3pv6xi88506c" path="res://main/UI/Assets/buttonClick.png" id="3_qqpbc"]
+[ext_resource type="Texture2D" uid="uid://dh56x4ctiuaot" path="res://main/UI/Assets/buttonHover.png" id="4_1a22c"]
+[ext_resource type="Texture2D" uid="uid://xmxyxqfnmew2" path="res://main/UI/Assets/buttonX.png" id="5_w0j8h"]
+[ext_resource type="FontFile" uid="uid://cxwsc2x6pebwe" path="res://main/UI/Fonts/Lacquer-Regular.ttf" id="6_cakvf"]
+
+[node name="SaveSelectMenu" type="Control" unique_id=785678458]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_chiu8")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1358579271]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_pyukv")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="SlotsVBox" type="VBoxContainer" parent="." unique_id=695233747]
+custom_minimum_size = Vector2(860, 614)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -430.0
+offset_top = -307.0
+offset_right = 430.0
+offset_bottom = 307.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 18
+
+[node name="Slot1Row" type="Control" parent="SlotsVBox" unique_id=527086130]
+custom_minimum_size = Vector2(860, 140)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="SaveSlot1Button" type="TextureButton" parent="SlotsVBox/Slot1Row" unique_id=1172004553]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(431, 140)
+layout_mode = 0
+offset_left = 214.5
+offset_right = 645.5
+offset_bottom = 140.0
+texture_normal = ExtResource("2_l6fqg")
+texture_pressed = ExtResource("3_qqpbc")
+texture_hover = ExtResource("4_1a22c")
+
+[node name="SaveSlot1Label" type="Label" parent="SlotsVBox/Slot1Row/SaveSlot1Button" unique_id=798589967]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.83137256, 0.83137256, 0.83137256, 1)
+theme_override_fonts/font = ExtResource("6_cakvf")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DeleteSlot1Button" type="TextureButton" parent="SlotsVBox/Slot1Row" unique_id=1909902224]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(487, 463)
+layout_mode = 0
+offset_left = 680.0
+offset_right = 1167.0
+offset_bottom = 463.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("5_w0j8h")
+texture_pressed = ExtResource("5_w0j8h")
+texture_hover = ExtResource("5_w0j8h")
+
+[node name="Slot2Row" type="Control" parent="SlotsVBox" unique_id=1499517343]
+custom_minimum_size = Vector2(860, 140)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="SaveSlot2Button" type="TextureButton" parent="SlotsVBox/Slot2Row" unique_id=1705861803]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(431, 140)
+layout_mode = 0
+offset_left = 214.5
+offset_right = 645.5
+offset_bottom = 140.0
+texture_normal = ExtResource("2_l6fqg")
+texture_pressed = ExtResource("3_qqpbc")
+texture_hover = ExtResource("4_1a22c")
+
+[node name="SaveSlot2Label" type="Label" parent="SlotsVBox/Slot2Row/SaveSlot2Button" unique_id=1495439015]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.83137256, 0.83137256, 0.83137256, 1)
+theme_override_fonts/font = ExtResource("6_cakvf")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DeleteSlot2Button" type="TextureButton" parent="SlotsVBox/Slot2Row" unique_id=481654337]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(487, 463)
+layout_mode = 0
+offset_left = 680.0
+offset_right = 1167.0
+offset_bottom = 463.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("5_w0j8h")
+texture_pressed = ExtResource("5_w0j8h")
+texture_hover = ExtResource("5_w0j8h")
+
+[node name="Slot3Row" type="Control" parent="SlotsVBox" unique_id=691615829]
+custom_minimum_size = Vector2(860, 140)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="SaveSlot3Button" type="TextureButton" parent="SlotsVBox/Slot3Row" unique_id=2113205730]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(431, 140)
+layout_mode = 0
+offset_left = 214.5
+offset_right = 645.5
+offset_bottom = 140.0
+texture_normal = ExtResource("2_l6fqg")
+texture_pressed = ExtResource("3_qqpbc")
+texture_hover = ExtResource("4_1a22c")
+
+[node name="SaveSlot3Label" type="Label" parent="SlotsVBox/Slot3Row/SaveSlot3Button" unique_id=459309043]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.83137256, 0.83137256, 0.83137256, 1)
+theme_override_fonts/font = ExtResource("6_cakvf")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DeleteSlot3Button" type="TextureButton" parent="SlotsVBox/Slot3Row" unique_id=230209137]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(487, 463)
+layout_mode = 0
+offset_left = 680.0
+offset_right = 1167.0
+offset_bottom = 463.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("5_w0j8h")
+texture_pressed = ExtResource("5_w0j8h")
+texture_hover = ExtResource("5_w0j8h")
+
+[node name="Slot4Row" type="Control" parent="SlotsVBox" unique_id=712400877]
+custom_minimum_size = Vector2(860, 140)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="SaveSlot4Button" type="TextureButton" parent="SlotsVBox/Slot4Row" unique_id=489236192]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(431, 140)
+layout_mode = 0
+offset_left = 214.5
+offset_right = 645.5
+offset_bottom = 140.0
+texture_normal = ExtResource("2_l6fqg")
+texture_pressed = ExtResource("3_qqpbc")
+texture_hover = ExtResource("4_1a22c")
+
+[node name="SaveSlot4Label" type="Label" parent="SlotsVBox/Slot4Row/SaveSlot4Button" unique_id=597335541]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.83137256, 0.83137256, 0.83137256, 1)
+theme_override_fonts/font = ExtResource("6_cakvf")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DeleteSlot4Button" type="TextureButton" parent="SlotsVBox/Slot4Row" unique_id=1946909987]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(487, 463)
+layout_mode = 0
+offset_left = 680.0
+offset_right = 1167.0
+offset_bottom = 463.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("5_w0j8h")
+texture_pressed = ExtResource("5_w0j8h")
+texture_hover = ExtResource("5_w0j8h")
+
+[node name="BackButton" type="TextureButton" parent="." unique_id=183702825]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(431, 140)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -215.5
+offset_top = -180.0
+offset_right = 215.5
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("2_l6fqg")
+texture_pressed = ExtResource("3_qqpbc")
+texture_hover = ExtResource("4_1a22c")
+
+[node name="BackLabel" type="Label" parent="BackButton" unique_id=606370941]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.83137256, 0.83137256, 0.83137256, 1)
+theme_override_fonts/font = ExtResource("6_cakvf")
+theme_override_font_sizes/font_size = 72
+text = "Back"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DeleteConfirmDialog" type="ConfirmationDialog" parent="." unique_id=98073907]
+unique_name_in_owner = true
+title = "Delete Save"
+dialog_text = "Are you sure you want to delete this save?"

@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://djdq0dsxs1tii"]
+
+[ext_resource type="Script" uid="uid://cpeq40mwlrb2e" path="res://main/UI/ScreenResolution/resolution.gd" id="1_8ri3j"]
+[ext_resource type="Texture2D" uid="uid://xwad0po1aibl" path="res://main/UI/Assets/Background.png" id="2_tkd62"]
+[ext_resource type="Texture2D" uid="uid://8vwgnb5g2wft" path="res://main/UI/Assets/button.png" id="2_vk8e6"]
+[ext_resource type="Texture2D" uid="uid://d3pv6xi88506c" path="res://main/UI/Assets/buttonClick.png" id="3_jevab"]
+[ext_resource type="Texture2D" uid="uid://dh56x4ctiuaot" path="res://main/UI/Assets/buttonHover.png" id="4_e5mgo"]
+
+[node name="Resolution" type="Control" unique_id=973274851]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8ri3j")
+metadata/_edit_use_anchors_ = true
+
+[node name="Background" type="TextureRect" parent="." unique_id=556756175]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_tkd62")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1140548685]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -150.0
+offset_right = 200.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FullscreenCheck" type="CheckButton" parent="VBoxContainer" unique_id=966346829]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Fullscreen"
+
+[node name="Windowed720Button" type="TextureButton" parent="VBoxContainer" unique_id=1616653121]
+unique_name_in_owner = true
+layout_mode = 2
+texture_normal = ExtResource("2_vk8e6")
+texture_pressed = ExtResource("3_jevab")
+texture_hover = ExtResource("4_e5mgo")
+
+[node name="Windowed720Label" type="Label" parent="VBoxContainer/Windowed720Button" unique_id=1293965580]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+text = "Windowed 720p"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MinimizeButton" type="TextureButton" parent="VBoxContainer" unique_id=2071329085]
+unique_name_in_owner = true
+layout_mode = 2
+texture_normal = ExtResource("2_vk8e6")
+texture_pressed = ExtResource("3_jevab")
+texture_hover = ExtResource("4_e5mgo")
+
+[node name="MinimizeLabel" type="Label" parent="VBoxContainer/MinimizeButton" unique_id=665829636]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+text = "Minimize"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ResolutionLabel" type="Label" parent="VBoxContainer" unique_id=284539140]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Window info"

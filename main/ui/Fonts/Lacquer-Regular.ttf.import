@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://cxwsc2x6pebwe"
-path="res://.godot/imported/Lacquer-Regular.ttf-5edf20b6f48c143c0c8a18d9f9351027.fontdata"
+path="res://.godot/imported/Lacquer-Regular.ttf-ef080fdf2b1484bfa7acbae33305cfa7.fontdata"
 
 [deps]
 
-source_file="res://main/ui/Fonts/Lacquer-Regular.ttf"
-dest_files=["res://.godot/imported/Lacquer-Regular.ttf-5edf20b6f48c143c0c8a18d9f9351027.fontdata"]
+source_file="res://main/UI/Fonts/Lacquer-Regular.ttf"
+dest_files=["res://.godot/imported/Lacquer-Regular.ttf-ef080fdf2b1484bfa7acbae33305cfa7.fontdata"]
 
 [params]
 

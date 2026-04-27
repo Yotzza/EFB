@@ -1,0 +1,125 @@
+[gd_scene format=3 uid="uid://dht1lyn2586dx"]
+
+[ext_resource type="Script" uid="uid://cw6lk3ceb1f57" path="res://main/UI/SettingsMenu/settings_menu.gd" id="1_g0gjc"]
+[ext_resource type="Texture2D" uid="uid://xwad0po1aibl" path="res://main/UI/Assets/Background.png" id="2_aqsje"]
+[ext_resource type="Texture2D" uid="uid://8vwgnb5g2wft" path="res://main/UI/Assets/button.png" id="2_f0oel"]
+[ext_resource type="Texture2D" uid="uid://d3pv6xi88506c" path="res://main/UI/Assets/buttonClick.png" id="3_t742d"]
+[ext_resource type="FontFile" uid="uid://cxwsc2x6pebwe" path="res://main/UI/Fonts/Lacquer-Regular.ttf" id="4_d4woy"]
+[ext_resource type="Texture2D" uid="uid://dh56x4ctiuaot" path="res://main/UI/Assets/buttonHover.png" id="4_j110g"]
+
+[node name="SettingsMenu" type="Control" unique_id=878753652]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g0gjc")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1340202823]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_aqsje")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1887848862]
+custom_minimum_size = Vector2(460, 700)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -230.0
+offset_top = -350.0
+offset_right = 230.0
+offset_bottom = 350.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 18
+alignment = 1
+
+[node name="FullscreenCheck" type="CheckButton" parent="VBoxContainer" unique_id=1544816832]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(431, 48)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Fullscreen"
+
+[node name="AudioHeader" type="TextureRect" parent="VBoxContainer" unique_id=1571006950]
+custom_minimum_size = Vector2(431, 140)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("2_f0oel")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="AudioHeaderLabel" type="Label" parent="VBoxContainer/AudioHeader" unique_id=1565202391]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.83033526, 0.83033514, 0.83033514, 1)
+theme_override_fonts/font = ExtResource("4_d4woy")
+theme_override_font_sizes/font_size = 72
+text = "Audio"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MusicLabel" type="Label" parent="VBoxContainer" unique_id=1689235719]
+custom_minimum_size = Vector2(431, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Music Volume"
+horizontal_alignment = 1
+
+[node name="MusicSlider" type="HSlider" parent="VBoxContainer" unique_id=1768514931]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(431, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+value = 80.0
+
+[node name="SfxLabel" type="Label" parent="VBoxContainer" unique_id=1577982970]
+custom_minimum_size = Vector2(431, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "SFX Volume"
+horizontal_alignment = 1
+
+[node name="SfxSlider" type="HSlider" parent="VBoxContainer" unique_id=1916415732]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(431, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+value = 60.0
+
+[node name="BackButton" type="TextureButton" parent="VBoxContainer" unique_id=579633285]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(431, 140)
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("2_f0oel")
+texture_pressed = ExtResource("3_t742d")
+texture_hover = ExtResource("4_j110g")
+
+[node name="BackLabel" type="Label" parent="VBoxContainer/BackButton" unique_id=1936386708]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.83137256, 0.83137256, 0.83137256, 1)
+theme_override_fonts/font = ExtResource("4_d4woy")
+theme_override_font_sizes/font_size = 72
+text = "Back"
+horizontal_alignment = 1
+vertical_alignment = 1

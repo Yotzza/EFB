@@ -6,7 +6,7 @@ This ledger is the product memory for Escape From Beyoslavia. Update it whenever
 
 | Feature | Status | Source | Notes |
 | --- | --- | --- | --- |
-| Main menu | In progress | `ui/MainMenu/`, `Scenes/game_manager.gd` | Emits new game, load game, settings, and exit intents. Load/settings are stubs in the game manager. |
+| Main menu | In progress | `UI/MainMenu/`, `UI/PlayMenu/`, `UI/SettingsMenu/`, `UI/ScreenResolution/`, `Managers/ResolutionManager.gd` | Uses a shared full-screen background across UI scenes, routes Play and Settings to dedicated menus, confirms Exit directly from the main menu, presents Settings as a single vertical stack with audio controls, keeps save-slot actions centered while showing delete buttons only for occupied saves, and caps UI upscaling above 1080p so menus stay sharp and centered on larger displays. |
 | New game transition | In progress | `Scenes/GameManager.tscn`, `Scenes/game_manager.gd`, `ui/NewGame/NewGame.tscn` | Game manager removes the main menu and instantiates the new game scene as a generic `Node`, so UI-rooted setup scenes and future `Node2D` gameplay scenes both work. |
 | Player movement | In progress | `Scenes/player/player.gd`, `project.godot` | WASD input drives `CharacterBody2D` movement. |
 | Mouse-facing player sprites | In progress | `Scenes/player/player.gd`, `art/playerBody/`, `art/playerHead/` | Body/head textures switch between four directions based on mouse position. |
