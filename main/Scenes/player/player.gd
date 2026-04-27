@@ -34,8 +34,8 @@ var head_textures = {
 }
 
 func set_direction(dir: String):
-	$Sprite2D2.texture = body_textures[dir]
-	$Sprite2D.texture = head_textures[dir]
+	$Head.texture = head_textures[dir]
+	$Body.texture = body_textures[dir]
 
 func update_sprites(dir: Vector2):
 	if abs(dir.x) > abs(dir.y):

@@ -5,19 +5,19 @@
 [ext_resource type="Texture2D" uid="uid://dnh4v222i12q0" path="res://main/art/playerBody/1.png" id="3_e6fcf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pwpyl"]
-size = Vector2(31, 71.5)
+size = Vector2(19.5, 52)
 
 [node name="Player" type="CharacterBody2D" unique_id=158068950]
 script = ExtResource("1_pwpyl")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=479797091]
+[node name="Head" type="Sprite2D" parent="." unique_id=479797091]
 z_index = 1
 position = Vector2(0, -17)
-scale = Vector2(0.52, 0.52)
+scale = Vector2(0.32, 0.32)
 texture = ExtResource("2_pwpyl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=314135940]
-position = Vector2(1, 77)
+position = Vector2(-0.5, 40)
 scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_pwpyl")
 
@@ -25,7 +25,7 @@ shape = SubResource("RectangleShape2D_pwpyl")
 position_smoothing_enabled = true
 position_smoothing_speed = 4.0
 
-[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1355202299]
-position = Vector2(0, 79)
-scale = Vector2(0.83, 0.83)
+[node name="Body" type="Sprite2D" parent="." unique_id=1355202299]
+position = Vector2(0, 44)
+scale = Vector2(0.57, 0.57)
 texture = ExtResource("3_e6fcf")
