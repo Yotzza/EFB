@@ -6,7 +6,7 @@ extends Node
 func _ready() -> void:
 	load_main_menu("game_start")
 
-func load_main_menu(origin: String):
+func load_main_menu(_origin: String):
 	var main_menu: Control = main_menu_packed.instantiate()
 	main_menu.new_game_pressed.connect(new_game)
 	main_menu.load_game_pressed.connect(load_game_open)
@@ -17,7 +17,7 @@ func load_main_menu(origin: String):
 func new_game(origin: String):
 	if origin == "main_menu":
 		get_node("MainMenu").queue_free()
-	var new_game: Node2D = new_game_packed.instantiate()
+	var new_game: Node = new_game_packed.instantiate()
 	add_child(new_game)
 	
 func load_game_open(_origin: String):
@@ -32,5 +32,5 @@ func exit_game(_origin: String):
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7ffypv5ouqkn"
-path="res://.godot/imported/LoadGameHover.png-06651d5fc7fd05e33fb5b1ca7f72df24.ctex"
+uid="uid://exbxxcio2psl"
+path="res://.godot/imported/panelHuge.png-1b1d3def9337cf5e49c9c62306d1991d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://main/ui/MainMenu/LoadGameHover.png"
-dest_files=["res://.godot/imported/LoadGameHover.png-06651d5fc7fd05e33fb5b1ca7f72df24.ctex"]
+source_file="res://main/ui/Assets/panelHuge.png"
+dest_files=["res://.godot/imported/panelHuge.png-1b1d3def9337cf5e49c9c62306d1991d.ctex"]
 
 [params]
 

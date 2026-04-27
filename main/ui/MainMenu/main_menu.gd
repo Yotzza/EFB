@@ -20,3 +20,10 @@ func _on_settings_button_pressed() -> void:
 
 func _on_exit_game_button_pressed() -> void:
 	exit_game_pressed.emit("main_menu")
+
+
+func _on_fullscreen_toggled(button_pressed: bool) -> void:
+	if button_pressed:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+	else:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)

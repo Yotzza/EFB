@@ -7,7 +7,7 @@ This ledger is the product memory for Escape From Beyoslavia. Update it whenever
 | Feature | Status | Source | Notes |
 | --- | --- | --- | --- |
 | Main menu | In progress | `ui/MainMenu/`, `Scenes/game_manager.gd` | Emits new game, load game, settings, and exit intents. Load/settings are stubs in the game manager. |
-| New game transition | In progress | `Scenes/GameManager.tscn`, `Scenes/game_manager.gd`, `ui/NewGame/new_game.tscn` | Game manager removes the main menu and instantiates the new game scene. |
+| New game transition | In progress | `Scenes/GameManager.tscn`, `Scenes/game_manager.gd`, `ui/NewGame/NewGame.tscn` | Game manager removes the main menu and instantiates the new game scene as a generic `Node`, so UI-rooted setup scenes and future `Node2D` gameplay scenes both work. |
 | Player movement | In progress | `Scenes/player/player.gd`, `project.godot` | WASD input drives `CharacterBody2D` movement. |
 | Mouse-facing player sprites | In progress | `Scenes/player/player.gd`, `art/playerBody/`, `art/playerHead/` | Body/head textures switch between four directions based on mouse position. |
 | Player progression data | Early model | `Scripts/PlayerData.gd`, `Scripts/SkillsClass.gd` | Tracks money, reputation, skill points, level, and starter skill values. |
