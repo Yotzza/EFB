@@ -1,14 +1,35 @@
 [gd_scene format=3 uid="uid://wunsx1akgrp0"]
 
 [ext_resource type="PackedScene" uid="uid://bc24edh4a84n3" path="res://main/Scenes/player/player.tscn" id="1_pd3se"]
+[ext_resource type="Texture2D" uid="uid://8vwgnb5g2wft" path="res://main/UI/Assets/button.png" id="2_56sw4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_54vff"]
+size = Vector2(421, 132)
 
 [node name="ShopBase" type="Node2D" unique_id=910564130]
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=809886934]
-offset_left = -500.0
-offset_top = -300.0
-offset_right = 500.0
-offset_bottom = 300.0
-color = Color(0.5890956, 0.5890956, 0.5890956, 1)
+[node name="Player" parent="." unique_id=158068950 instance=ExtResource("1_pd3se")]
+position = Vector2(959, 543)
+speed = 300.0
 
-[node name="Player" parent="ColorRect" unique_id=158068950 instance=ExtResource("1_pd3se")]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1477171288]
+position = Vector2(250, 845)
+texture = ExtResource("2_56sw4")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D" unique_id=1202881194]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D" unique_id=1379949904]
+visible = false
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_54vff")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1219525871]
+position = Vector2(348, 654)
+texture = ExtResource("2_56sw4")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D2" unique_id=239030512]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D2/StaticBody2D" unique_id=1381651575]
+visible = false
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_54vff")
