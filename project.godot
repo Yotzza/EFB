@@ -64,6 +64,13 @@ pause={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="Player"
+2d_physics/layer_2="Ground"
+2d_physics/layer_3="Cliffs"
+2d_physics/layer_4="Walls"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://c5cmjwcdky8kn"]
 
 [ext_resource type="PackedScene" uid="uid://djdq0dsxs1tii" path="res://main/UI/ScreenResolution/resolution.tscn" id="2_xpqsj"]
-[ext_resource type="PackedScene" uid="uid://bgypustg8pxcx" path="res://main/UI/NewGame/NewGame.tscn" id="3_w1jtc"]
 
 [sub_resource type="GDScript" id="GDScript_4lwom"]
 script/source = "extends Node
@@ -14,17 +13,11 @@ func _ready() -> void:
 
 func load_main_menu(_origin: String):
 	var main_menu: Control = main_menu_packed.instantiate()
-	main_menu.new_game_pressed.connect(new_game)
 	main_menu.load_game_pressed.connect(load_game_open)
 	main_menu.settings_pressed.connect(settings_open)
 	main_menu.exit_game_pressed.connect(exit_game)
 	add_child(main_menu)
 	
-func new_game(origin: String):
-	if origin == \"main_menu\":
-		get_node(\"MainMenu\").queue_free()
-	var new_game: Node = new_game_packed.instantiate()
-	add_child(new_game)
 	
 func load_game_open(_origin: String):
 	pass
@@ -42,7 +35,10 @@ func _process(_delta: float) -> void:
 	pass
 "
 
+[sub_resource type="Resource" id="Resource_l8el5"]
+metadata/__load_path__ = "res://main/UI/NewGame/NewGame.tscn"
+
 [node name="GameManager" type="Node" unique_id=520806055]
 script = SubResource("GDScript_4lwom")
 main_menu_packed = ExtResource("2_xpqsj")
-new_game_packed = ExtResource("3_w1jtc")
+new_game_packed = SubResource("Resource_l8el5")

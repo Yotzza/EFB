@@ -5,27 +5,33 @@
 [ext_resource type="Texture2D" uid="uid://dnh4v222i12q0" path="res://main/art/playerBody/1.png" id="3_e6fcf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pwpyl"]
-size = Vector2(19.5, 52)
+size = Vector2(9, 4)
 
 [node name="Player" type="CharacterBody2D" unique_id=158068950]
+z_index = 1
+collision_mask = 12
 script = ExtResource("1_pwpyl")
+
+[node name="Body" type="Sprite2D" parent="." unique_id=1355202299]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(0, 44)
+scale = Vector2(0.28, 0.27999997)
+texture = ExtResource("3_e6fcf")
 
 [node name="Head" type="Sprite2D" parent="." unique_id=479797091]
 z_index = 1
-position = Vector2(0, -17)
-scale = Vector2(0.32, 0.32)
+y_sort_enabled = true
+position = Vector2(0, 10)
+scale = Vector2(0.17333333, 0.17333333)
 texture = ExtResource("2_pwpyl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=314135940]
-position = Vector2(-0.5, 40)
+y_sort_enabled = true
+position = Vector2(0, 61)
 scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_pwpyl")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=419884658]
 position_smoothing_enabled = true
 position_smoothing_speed = 4.0
-
-[node name="Body" type="Sprite2D" parent="." unique_id=1355202299]
-position = Vector2(0, 44)
-scale = Vector2(0.57, 0.57)
-texture = ExtResource("3_e6fcf")
