@@ -16,8 +16,8 @@ func _physics_process(_delta: float) -> void:
 
 #char model rotate by mouse position
 
-@onready var body: Sprite2D = $Body
-@onready var head: Sprite2D = $Head
+@onready var body: Sprite2D = $Sprite2D/Body
+@onready var head: Sprite2D = $Sprite2D/Head
 
 var body_textures = {
 	"up": preload("res://main/art/playerBody/4.png"),
@@ -34,8 +34,8 @@ var head_textures = {
 }
 
 func set_direction(dir: String):
-	$Head.texture = head_textures[dir]
-	$Body.texture = body_textures[dir]
+	head.texture = head_textures[dir]
+	body.texture = body_textures[dir]
 
 func update_sprites(dir: Vector2):
 	if abs(dir.x) > abs(dir.y):
